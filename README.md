@@ -1,5 +1,8 @@
-# UTS_WEB
-
+# UTS_WEB 
+#### Nama   = DZAKI ARIF RAHMAN  
+#### Kelas  = TI.24.A4  
+#### NIM    = 312410312  
+#### Matkul  = Pemograman Web 1 
 
 # untuk penjelasan lebih nya ada di vidio 
 berikut link youtube vidionya = https://youtu.be/0Bu8rFaypVM?feature=shared 
