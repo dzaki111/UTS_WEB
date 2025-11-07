@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Halaman Pemesanan (Checkout)</h1>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Detail Keranjang Belanja</h2>
+            <table id="cart-table">
+                <thead>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Judul Buku</th>
+                        <th>Harga Satuan</th>
+                        <th>Jumlah</th>
+                        <th>Subtotal</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    <tr><td colspan="6" class="text-center">Keranjang kosong.</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4" class="text-right">Total Pembayaran</td>
+                        <td id="grand-total">Rp 0</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button id="clear-cart-btn" class="btn-danger">Kosongkan Keranjang</button>
+        </section>
+
+        <section class="card">
+            <h2>Informasi Pemesan & Pembayaran</h2>
+            <form id="checkout-form">
+                
+                <h3>Data Pemesan</h3>
+                <label for="nama-pemesan">Nama Lengkap:</label><input type="text" id="nama-pemesan" required><br>
+                <label for="email-pemesan">Email:</label><input type="email" id="email-pemesan" required><br>
+                <label for="alamat">Alamat Lengkap:</label><textarea id="alamat" rows="3" required></textarea><br>
+                <label for="telepon">Nomor Telepon:</label><input type="tel" id="telepon" required><br>
+                
+                <h3>Metode Pengiriman</h3>
+                <label for="ekspedisi">Ekspedisi:</label>
+                <select id="ekspedisi" required>
+                    <option value="">Pilih Ekspedisi</option>
+                    <option value="JNE">JNE Reguler</option>
+                    <option value="TIKI">TIKI ONS</option>
+                    <option value="Pos">Pos Kilat Khusus</option>
+                </select><br>
+                <label for="biaya-kirim">Biaya Kirim (Dummy):</label><input type="text" id="biaya-kirim" value="Rp 20.000" readonly><br>
+
+                <h3>Metode Pembayaran</h3>
+                <label for="metode-bayar">Metode Pembayaran:</label>
+                <select id="metode-bayar" required>
+                    <option value="">Pilih Metode</option>
+                    <option value="Transfer">Transfer Bank (BCA/Mandiri)</option>
+                    <option value="COD">COD (Bayar di Tempat)</option>
+                    <option value="Ewallet">E-Wallet (Dana/Gopay)</option>
+                </select><br>
+
+                <button type="submit" class="btn-success">Konfirmasi & Bayar</button>
+            </form>
+        </section>
+    </main>
+
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-book"></i></a> 
+        <a href="stok.html" class="nav-item"><i class="fas fa-warehouse"></i></a> 
+        <a href="checkout.html" class="nav-item active"><i class="fas fa-shopping-cart"></i></a> <a href="tracking.html" class="nav-item"><i class="fas fa-truck"></i></a> 
+        <a href="#" class="nav-item" id="logout-btn-nav"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script> <script src="js/checkout.js"></script>
+</body>
+</html>

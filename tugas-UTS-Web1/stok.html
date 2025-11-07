@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok & Katalog - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+</head>
+<body>
+    
+    <header>
+        <h1> Informasi Stok/Katalog Buku</h1>
+    </header>
+    
+    <main>
+        <div class="card">
+            <table id="katalog-table">
+                <thead>
+                    <tr>
+                        <th>Kode</th>
+                        <th>Cover</th>
+                        <th>Judul (Nama Barang)</th>
+                        <th>Jenis</th>
+                        <th>Edisi</th>
+                        <th>Stok</th>
+                        <th>Harga</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="katalog-body">
+                    </tbody>
+            </table>
+
+            <hr>
+
+            <h2>➕ Tambah Stok Baru</h2>
+            <form id="add-stok-form">
+                <label for="new-kode">Kode Barang:</label><input type="text" id="new-kode" required><br>
+                <label for="new-nama">Judul (Nama Barang):</label><input type="text" id="new-nama" required><br>
+                <label for="new-jenis">Jenis Barang:</label><input type="text" id="new-jenis" value="Buku Ajar" required><br>
+                <label for="new-edisi">Edisi:</label><input type="number" id="new-edisi" min="1" required><br>
+                <label for="new-stok">Stok:</label><input type="number" id="new-stok" min="1" required><br>
+                <label for="new-harga">Harga (Angka, cth: 150000):</label><input type="number" id="new-harga" min="1000" required><br>
+                <label for="new-cover">URL Cover (Contoh: assets/img/namafile.jpg):</label><input type="text" id="new-cover" value="assets/img/default.jpg"><br>
+                <button type="submit" class="btn-primary">Tambah Buku ke Katalog</button>
+            </form>
+            
+        </div> </main>
+
+    <div class="bottom-nav">
+        <a href="dashboard.html" class="nav-item"><i class="fas fa-book"></i></a> 
+        <a href="stok.html" class="nav-item active"><i class="fas fa-warehouse"></i></a> 
+        <a href="checkout.html" class="nav-item"><i class="fas fa-shopping-cart"></i></a> 
+        <a href="tracking.html" class="nav-item"><i class="fas fa-truck"></i></a> 
+        <a href="#" class="nav-item" id="logout-btn-nav"><i class="fas fa-sign-out-alt"></i></a>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/stok.js"></script>
+</body>
+</html>
