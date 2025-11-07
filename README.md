@@ -1,19 +1,56 @@
 # UTS_WEB
 
+# untuk penjelasan lebih nya ada di vidio 
+berikut link youtube vidionya = https://youtu.be/0Bu8rFaypVM?feature=shared 
+## Fitur Utama Aplikasi
 
-##Fitur Utama Web Online book 
+Proyek ini menghadirkan lima fitur inti, yang semuanya diimplementasikan menggunakan JavaScript DOM Manipulation:
 
-1. Katalog Buku Dinamis: Menampilkan daftar buku dalam tata letak grid yang responsif.
-<img width="936" height="592" alt="image" src="https://github.com/user-attachments/assets/2e9725ca-4a5a-4fe8-af56-e60dedb8c36f" />
+### 1. Katalog Buku Dinamis
+Menampilkan daftar buku dalam tata letak *grid* yang responsif, memastikan tampilan yang optimal di berbagai ukuran layar.
 
-2. Pencarian Interaktif: Memfilter katalog secara real-time menggunakan input pengguna.
-<img width="1846" height="889" alt="image" src="https://github.com/user-attachments/assets/7c7e3090-e019-4011-99ec-0a10d434c8b9" />
+![Tampilan Katalog Buku Dinamis](https://github.com/user-attachments/assets/2e9725ca-4a5a-4fe8-af56-e60dedb8c36f)
 
-3. Keranjang Pembelian: Memungkinkan pengguna menambahkan buku yang ingin dibeli.
-<img width="1854" height="898" alt="image" src="https://github.com/user-attachments/assets/75f6fe80-fc47-4688-b61f-167e73bf7e59" />
+### 2. Pencarian Interaktif
+Mengimplementasikan fungsi pencarian *real-time* (live search) yang memfilter katalog berdasarkan input pengguna tanpa perlu memuat ulang halaman.
 
-4. Manajemen Data Persisten: Data keranjang disimpan menggunakan Local Storage untuk memastikan item tidak hilang saat halaman di-refresh.
-<img width="923" height="745" alt="image" src="https://github.com/user-attachments/assets/7bce6235-a701-429a-9325-837a12a1cd93" />
+![Demo Pencarian Interaktif](https://github.com/user-attachments/assets/7c7e3090-e019-4011-99ec-0a10d434c8b9)
 
-5. Validasi Form: Menyediakan feedback visual yang jelas saat terjadi kesalahan input pada proses checkout atau formulir lainnya.
-<img width="848" height="400" alt="image" src="https://github.com/user-attachments/assets/5cec8508-1c80-4793-8df3-7a5bc410f04f" />
+### 3. Keranjang Pembelian
+Memungkinkan pengguna menambahkan buku yang ingin dibeli, menampilkan ringkasan item, dan total harga yang harus dibayar.
+
+![Tampilan Keranjang Pembelian](https://github.com/user-attachments/assets/75f6fe80-fc47-4688-b61f-167e73bf7e59)
+
+### 4. Manajemen Data Persisten
+Data keranjang belanja disimpan menggunakan **Local Storage** pada *browser* pengguna, memastikan item yang ditambahkan tidak hilang saat halaman di-*refresh* atau *browser* ditutup.
+
+![Contoh Data Disimpan di Local Storage](https://github.com/user-attachments/assets/7bce6235-a701-429a-9325-837a12a1cd93)
+
+### 5. Validasi Form
+Menyediakan *feedback* visual yang jelas dan kontekstual (bukan hanya `alert()` sederhana) saat terjadi kesalahan input pada proses *checkout* atau formulir lainnya, meningkatkan *User Experience (UX)*.
+
+![Tampilan Feedback Validasi Form](https://github.com/user-attachments/assets/5cec8508-1c80-4793-8df3-7a5bc410f04f)
+
+---
+
+##  Implementasi Teknis & Kriteria Penilaian
+
+Berikut adalah rincian bagaimana proyek ini memenuhi kriteria-kriteria kunci penilaian:
+
+### 1. Struktur HTML & Desain (Kriteria a & b)
+
+* **Semantik & Aksesibilitas:** Semua konten menggunakan tag HTML semantik yang tepat (`<header>`, `<main>`, `<nav>`, dll.) untuk meningkatkan aksesibilitas *(a11y)* dan struktur kode.
+* **Mobile-First Design:** Desain CSS diprioritaskan untuk perangkat mobile, kemudian diskalakan ke desktop menggunakan **Flexbox, CSS Grid**, dan *Media Queries* untuk responsivitas optimal.
+* **CSS Variables:** Digunakan untuk skema warna yang modular dan mudah diubah.
+
+### 2. JavaScript DOM & Manipulasi Data (Kriteria c)
+
+* **DOM Effficient:** Aplikasi menggunakan `document.createElement()` untuk penambahan item ke keranjang secara dinamis, menunjukkan praktik terbaik dalam manipulasi DOM yang menghindari *reflow* halaman berlebihan.
+* **Alur Data Sistematis:** Data keranjang dikelola dalam *array* JavaScript sebelum disinkronkan ke **Local Storage**.
+
+### 3. Validasi & Modularitas (Kriteria d & e)
+
+* **Feedback Validasi (Kriteria d):** Validasi form diterapkan secara *client-side* dan memberikan pesan kesalahan yang spesifik, langsung, dan visual (tidak menggunakan `alert()`).
+* **Modularitas File (Kriteria e):** Kode JavaScript dibagi menjadi beberapa *module* (cth: `storage.js`, `render.js`) berdasarkan fungsinya. Hal ini menjaga kode tetap *maintainable* dan terstruktur.
+
+---
