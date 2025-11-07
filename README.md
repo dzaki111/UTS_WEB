@@ -32,6 +32,11 @@ Menyediakan feedback visual yang jelas saat terjadi kesalahan input pada proses 
 
 ![Tampilan Feedback Validasi Form](https://github.com/user-attachments/assets/5cec8508-1c80-4793-8df3-7a5bc410f04f)
 
+### 6. login
+pengguna harus logn terlebih dahulu sebelum masuk ke halaman utama
+
+<img width="670" height="584" alt="image" src="https://github.com/user-attachments/assets/509c94e6-e869-4e80-b70f-498a79bf58a4" />
+
 ---
 
 
